@@ -39,6 +39,7 @@ router.get('/getprofile/:id', userController_1.default.getFicha);
 router.get('/getalldata/:id', userController_1.default.getAllFicha);
 router.get('/getdnidata/:id', userController_1.default.getDniUser);
 router.get('/checkemailuser/:id', userController_1.default.check);
+router.get('/checkusername/:id', userController_1.default.checkUsername);
 router.get('/getimagesuser/:id/:status/:tipo', userController_1.default.getImagesUser);
 router.get('/getpendingimagesuser/:id', userController_1.default.getPendingImagesUser);
 router.post('/changepassworduser', userController_1.default.changePassword);

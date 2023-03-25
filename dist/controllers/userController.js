@@ -60,7 +60,18 @@ class UserController {
         }));
     }
     static putFakeData(req, res) {
-        let { id, username, edad, fumadora, atencion, tags, zonas, telefono, whatsapp, busto, cintura, genero, estatura, peso, cadera, servicios, clase, inicio, fin, horario_inicio, horario_fin, } = req.body;
+        let { id, username, edad, fumadora, 
+        //atencion,
+        //tags,
+        zonas, telefono, 
+        //whatsapp,
+        busto, cintura, 
+        //genero,
+        estatura, peso, cadera, 
+        //servicios,
+        //clase,
+        inicio, fin, horario_inicio, horario_fin, } = req.body;
+        console.log(id);
         //let $whatsapp = whatsapp.replace(/ /g, "").trim();
         users_1.default.updateOne({ _id: id }, {
             $set: {
@@ -68,19 +79,19 @@ class UserController {
                     username,
                     edad,
                     fumadora,
-                    atencion,
-                    tags,
+                    //atencion,
+                    //tags,
                     zonas,
                     telefono,
                     //whatsapp: $whatsapp,
                     busto,
                     cintura,
-                    genero,
+                    //genero,
                     estatura,
                     peso,
                     cadera,
-                    servicios,
-                    clase,
+                    //servicios,
+                    //clase,
                     inicio,
                     fin,
                     horario_inicio,
@@ -453,6 +464,26 @@ class UserController {
             }
             return res.status(200).json({
                 email: false,
+            });
+        });
+    }
+    static checkUsername(req, res) {
+        let username = req.params.id;
+        users_1.default.findOne({ "fakeData.username": username }).exec((err, username) => {
+            if (err) {
+                return res.status(500).json({
+                    ok: false,
+                    message: "Error",
+                    err,
+                });
+            }
+            if (!username) {
+                return res.status(200).json({
+                    username: true,
+                });
+            }
+            return res.status(200).json({
+                username: false,
             });
         });
     }
