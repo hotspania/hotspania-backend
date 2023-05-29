@@ -78,7 +78,7 @@ class UploadController {
                     });
                 }
                 let type = "";
-                (key === "original") ? (type = "PENDING") : "";
+                (key === "original") ? (type = "ACCEPTED") : "";
                 (key === "profile") ? (type = "ACCEPTED") : "";
                 (key === "dni") ? (type = "ACCEPTED") : "";
                 (key === "login") ? (type = "ACCEPTED") : "";
@@ -255,7 +255,7 @@ class UploadController {
                 }
             }
             let type = "";
-            (key === "original") ? (type = "PENDING") : "";
+            (key === "original") ? (type = "ACCEPTED") : "";
             (key === "profile") ? (type = "ACCEPTED") : "";
             (key === "dni") ? (type = "ACCEPTED") : "";
             let upload = yield UploadController.saveFile(id, fileName, type, key, height, width)
