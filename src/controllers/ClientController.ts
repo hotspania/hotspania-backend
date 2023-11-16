@@ -34,9 +34,9 @@ export default class ClientControler {
       modelProfile
         .find(
           {
-            user: {
+            /*user: {
               activa: 1,
-            },
+            },*/
             //listados: { $in: query },
             visible: true,
             online: true,
@@ -81,9 +81,9 @@ export default class ClientControler {
       modelProfile
         .find(
           {
-            user: {
+            /*user: {
               activa: 1,
-            },
+            },*/
             //listados: { $in: query },
             visible: true,
             freeze: false,

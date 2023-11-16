@@ -43,9 +43,9 @@ class ClientControler {
         if (!!status) {
             profile_1.default
                 .find({
-                user: {
-                    activa: 1,
-                },
+                /*user: {
+                  activa: 1,
+                },*/
                 //listados: { $in: query },
                 visible: true,
                 online: true,
@@ -87,9 +87,9 @@ class ClientControler {
         else {
             profile_1.default
                 .find({
-                user: {
-                    activa: 1,
-                },
+                /*user: {
+                  activa: 1,
+                },*/
                 //listados: { $in: query },
                 visible: true,
                 freeze: false,
