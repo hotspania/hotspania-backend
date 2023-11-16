@@ -38,7 +38,7 @@ export default class ClientControler {
               activa: 1,
             },*/
             //listados: { $in: query },
-            visible: true,
+            //visible: true,
             online: true,
             freeze: false,
           },
@@ -85,7 +85,7 @@ export default class ClientControler {
               activa: 1,
             },*/
             //listados: { $in: query },
-            visible: true,
+            //visible: true,
             freeze: false,
           },
           { imagenes: false, listados: false }

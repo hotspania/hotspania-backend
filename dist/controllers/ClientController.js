@@ -43,11 +43,14 @@ class ClientControler {
         if (!!status) {
             profile_1.default
                 .find({
+<<<<<<< HEAD
                 /*user: {
                   activa: 1,
                 },*/
+=======
+>>>>>>> b9829d9c2016accc4ff527896e6a30550cd2851a
                 //listados: { $in: query },
-                visible: true,
+                //visible: true,
                 online: true,
                 freeze: false,
             }, {
@@ -87,11 +90,14 @@ class ClientControler {
         else {
             profile_1.default
                 .find({
+<<<<<<< HEAD
                 /*user: {
                   activa: 1,
                 },*/
+=======
+>>>>>>> b9829d9c2016accc4ff527896e6a30550cd2851a
                 //listados: { $in: query },
-                visible: true,
+                //visible: true,
                 freeze: false,
             }, { imagenes: false, listados: false })
                 .populate("user")
